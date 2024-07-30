@@ -22,4 +22,4 @@ pnpm run dev
 
 ## Check for logs
 
-Check for logs from server/api/counter.get.ts. The file should contain some log statements.
+Check for logs from `server/api/counter.get.ts`. The file should contain some log statements.
