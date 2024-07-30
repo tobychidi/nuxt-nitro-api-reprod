@@ -1,6 +1,6 @@
 let count = 0;
 export default defineEventHandler((event) => {
-   const action = getQuery(event).action;
+   const action = getQuery<{ action: "increment" | "decrement" | "reset" }>(event).action;
 
    console.log({ count });
 
@@ -13,8 +13,6 @@ export default defineEventHandler((event) => {
          break;
       case "reset":
          count = 0;
-         break;
-      default:
          break;
    }
    console.log({ action, count });

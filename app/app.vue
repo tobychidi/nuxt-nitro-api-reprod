@@ -23,6 +23,10 @@ function increment() {
 watch([data], () => {
    console.log(data.value);
 });
+
+useHead({
+   title: "Nuxt x Console Ninja",
+});
 </script>
 <template>
    <div>
