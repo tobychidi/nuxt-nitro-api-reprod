@@ -55,7 +55,11 @@ body {
    background-color: #110519;
    color: white;
    font-family: Poppins sans-serif;
-   font-size: 18pt;
+   font-size: 14pt;
+
+   @media (min-width: 1080px) {
+      font-size: 18pt;
+   }
 }
 h1 {
    font-family: Jaro, sans-serif;
@@ -63,11 +67,11 @@ h1 {
    text-transform: uppercase;
 }
 header {
-   padding: 1em 4em;
+   padding: 1em 16%;
 }
 
 main {
-   padding: 1em 6em;
+   padding: 1em 20%;
 }
 
 .btn {
@@ -90,6 +94,7 @@ main {
 <style scoped>
 .btns {
    display: flex;
+   flex-wrap: wrap;
    gap: 1em;
 }
 </style>
