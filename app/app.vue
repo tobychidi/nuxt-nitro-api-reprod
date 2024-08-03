@@ -1,46 +1,18 @@
 <script lang="ts" setup>
-const action = ref();
-const { data, status } = await useFetch("/api/counter", {
-   query: { action: action },
-});
-
-// const pending = computed(() => ["pending"].includes(status.value));
-
-function reset() {
-   action.value = undefined;
-   action.value = "reset";
-}
-function decrement() {
-   action.value = undefined;
-   action.value = "decrement";
-}
-
-function increment() {
-   action.value = undefined;
-   action.value = "increment";
-}
-
-watch([data], () => {
-   console.log(data.value);
-});
+const count = ref<number>(0);
 
 useHead({
-   title: "Nuxt x Console Ninja",
+   title: "Nuxt x Eslint",
 });
 </script>
 <template>
    <div>
       <header>
-         <h1>Nuxt x Console Ninja</h1>
+         <h1>Nuxt x Eslint</h1>
       </header>
       <main>
-         <h2>Server based counter:{{ data?.count }}</h2>
-         <p>{{ data?.message }}</p>
-         <div class="btns">
-            <button class="btn" @click="reset">Reset</button>
-            <button class="btn" @click="decrement">Decrement</button>
-            <button class="btn" @click="increment">Increment</button>
-         </div>
+         <MyComponent :count />
+         <button class="btn" @click="count++">Increment</button>
       </main>
    </div>
 </template>
