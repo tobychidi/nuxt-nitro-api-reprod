@@ -1,5 +1,9 @@
 # Nuxt x Eslint
 
+## Spot the error
+
+Check out `app.vue` or `components/MyComponent.vue`. The types are throwing errors.
+
 ## Setup
 
 Install the dependencies:
