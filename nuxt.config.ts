@@ -7,5 +7,23 @@ export default defineNuxtConfig({
       compatibilityVersion: 4,
    },
 
-   modules: ["@nuxt/fonts", "@nuxt/eslint"]
+   nitro: {
+      imports: {
+         dirs: ["db"],
+      },
+      storage: {
+         cache: {
+            driver: "lruCache",
+         },
+      },
+   },
+
+   modules: ["@nuxt/eslint", "@nuxt/ui", "@vueuse/nuxt"],
+
+   runtimeConfig: {
+      cache: {
+         maxAge: 60,
+         //defaults to 60 seconds
+      },
+   },
 });
